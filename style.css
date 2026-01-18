@@ -97,3 +97,26 @@
 .banner p{
     color: #ffffff;
 }
+.podcast{
+    background-color: #1A0B2E;
+    text-align: center;
+    
+}
+.podcast h2{
+    color: white;
+    font-weight: 700;
+    font-size: 48;
+}
+.podcast p{
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.podcast .podcast-p-1{
+    margin-top: 30px;
+}
+.rating{
+    display: flex;
+    margin-top: 160px;
+    gap:80px ;
+}
