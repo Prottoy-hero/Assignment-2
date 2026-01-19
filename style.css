@@ -280,10 +280,24 @@ main>section{
 }
 
 .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #250D44;
   color: white;
-  padding: 25px;
+  gap: 1.2rem;
+  padding: 1.5rem;
   border-radius: 0.9rem;
+}
+.card>iframe{
+  border-radius: 1rem;
+}
+.card .clock{
+  color: #00ff88;
+  display: flex;
+  gap: 0.5rem;
+  align-self: self-start;
 }
 
 .card-feature .card h4{
@@ -389,5 +403,11 @@ font-weight: 700;
   
   .navbar{
     
+  }
+
+  .banner{
+    
+    background-size:;
+    background-position: center;
   }
 } 
