@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 }
 /* body{
   display: flex;
@@ -9,73 +11,91 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100vw;
 } */
 
 .navbar {
   display: flex;
   background-color: #1a0b2e;
-  padding: 37px 0;
+  padding: calc(24rem/16) 10%;
   justify-content: space-between;
   align-items: center;
+  /* position: sticky;
+  width: 100%; */
 }
 
 .btn {
+  border: none;
   border-radius: 20px;
-  padding: 12px 16px;
+  padding: 0.8rem 1rem;
   cursor: pointer;
-  background: linear-gradient(to right, #f7e93f, #fb09b4, #9100f8);
+  background: linear-gradient(45deg, #f7e93f, #fb09b4, #9100f8);
   color: white;
+   transition: all 0.2s ease;
+}
+.btn:hover{
+   background: linear-gradient(45deg, #f7e83f78, #fb09b28b, #9100f888);
+   transform: scale(1.1);
+   transition: all 0.2s ease;
 }
 .navbar-paragraph {
   display: flex;
-  gap: 32px;
+  gap: 2rem;
   color: white;
 }
 .navbar h2 {
   color: white;
+  font-size: 2.8rem;
+  font-weight: 700;
 }
-.wave {
-  background: linear-gradient(to right, #f7e93f, #fb09b4, #9100f8);
+.wave span{
+  background: linear-gradient(45deg, #f7e93f, #fb09b4, #9100f8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .banner-btn {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
 }
 .banner-btn-1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.8rem;
 }
 #banner-btn-2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.8rem;
   background-color: #1a0b2e;
   color: #00ff88;
   border: 1px solid #00ff88;
   border-radius: 20px;
-  padding: 12px 16px;
+  padding: 0.8rem 1rem;
   cursor: pointer;
 }
-
+#banner-btn-2:hover{
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  transform: scale(1.1);
+   transition: all 0.2s ease;
+}
 .banner {
   background-image: url(./assets/hero-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 760px;
+  height: calc(760rem/16);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .banner-img-1 {
@@ -83,34 +103,51 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
-  width: 350px;
-  height: 350px;
+  width: calc(350rem/16);
+  height: calc(350rem/16);
+  animation-name: dancing;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 .banner-img-2 {
   background-image: url(./assets/microphone.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto;
-  width: 350px;
-  height: 350px;
+  width: calc(350rem/16);
+  height: calc(350rem/16);
+}
+@keyframes dancing {
+  0%{
+    transform: scale(0.9);
+  }
+  50%{
+    transform: scale(1.25);
+  }
+  100%{
+    transform: scale(0.9);
+  }
 }
 #new{
   background-color: #00ff88;
   color: #1A0B2E;
-  padding: 10px 20px;
-  border-radius: 40px;
-  font-size: 18px;
+  padding: 0.6rem 1.25rem;
+  border-radius: 2.5rem;
+  font-size: 1.1rem;
   font-weight: 600;
   transform: translate3d(120px,-365px,0);
 }
 .banner h1 {
   color: white;
-  font-size: 60px;
+  font-size: 3.8rem;
   font-weight: 800;
 }
 
 .banner p {
   color: #ffffff;
+}
+main>section{
+  padding: 0 10%;
 }
 .podcast {
   background-color: #1a0b2e;
@@ -119,29 +156,29 @@
 .podcast h2 {
   color: white;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 3rem;
 }
 .podcast p {
   color: #ffffff;
-  margin-top: 10px;
+  margin-top: 0.6rem;
 }
 
 .podcast .podcast-p-1 {
-  margin-top: 30px;
+  margin-top: 1.9rem;
 }
 .rating {
   display: flex;
-  margin-top: 160px;
-  gap: 80px;
+  margin-top: 10rem;
+  gap: 5rem;
   text-align: center;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  padding-bottom: 120px;
+  padding-bottom: 7.5rem;
 }
 
 .rating h2 {
   color: #00ff88;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 900;
 }
 
@@ -151,14 +188,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;
-  padding-bottom: 160px;
+  padding-top: 6.3rem;
+  padding-bottom: 10rem;
 }
 
 .choose .card-container {
   color: white;
-  padding: 10px;
-  gap: 20px;
+  padding: 0.6rem;
+  gap: 1.2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -169,51 +206,53 @@
 }
 .choose h2 {
   color: #ffffff;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 .card-container h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   padding-bottom: 10px;
+  color:#ffffff;
+}
+.card-container>div{
+  padding: 2.2rem;
+  background-color: rgba(53, 17, 101,0.4);
+}
+.card-container>div>p{
+  color: rgba(255, 255, 255, 0.6);
 }
 .premium {
   grid-area: premium;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: #351165;
-  opacity: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 1.2rem;
+  border-radius: 0.95rem;
 }
 
 .mobile {
   grid-area: mobile;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: #351165;
-  opacity: 40%;
+  padding: 1.25rem;
+  border-radius: .95rem;
 }
 .global {
   grid-area: global;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: #351165;
-  opacity: 40%;
+  padding: 1.2rem;
+  border-radius: 0.95rem;
 }
 .exclusive {
   grid-area: exclusive;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: #351165;
-  opacity: 40%;
+  padding: 1.2rem;
+  border-radius: 0.9rem;
 }
 
 .rich {
   grid-area: rich;
-  padding: 20px;
+  padding: 1.2rem;
   border-radius: 15px;
-  background-color: #351165;
-  opacity: 40%;
 }
 
 .card-feature{
@@ -223,31 +262,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 120px;
-  padding-bottom:  120px;
-  gap: 30px;
+  padding-top: 7.5rem;
+  padding-bottom:  7.5rem;
+  gap: 1.9rem;
 }
 .card-feature h2{
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 40px;
 }
+.card-feature p{
+  color: rgba(255, 255, 255, 0.6);
+}
 .card-parent{
   display: flex;
-  gap: 30px;
+  gap: 2.9rem;
 }
 
 .card{
   background-color: #250D44;
   color: white;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 0.9rem;
 }
 
 .card-feature .card h4{
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 0.9rem;
 }
 
 .host{
@@ -257,40 +299,55 @@
   align-items: center;
 background-color: #1A0B2E;
 color: white;
-padding-bottom: 120px;
+padding-bottom: 7.5rem;
 }
 
 .alex{
   background-color:rgba(53, 17, 101, 0.4) ;
-  padding: 40px;
+  padding: 2.5rem;
   border-radius: 10px;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 .host h2{
-font-size: 48px;
+font-size: 3rem;
 font-weight: 700;
+}
+.host p{
+  color: rgba(255, 255, 255, 0.6);
 }
 .host .alex{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 1.5rem;
 }
 .alex-child h4{
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 0.9rem;
 }
 
 .alex-child p{
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
-.alex-btn img{
-  background-color: #1A0B2E;
-  border-radius: 50%;
-  border: 1px solid rgba(83, 60, 114, 1);
+
+.alex-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  
 }
+.alex-btn a{
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 1px solid rgba(83, 60, 114, 1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer{
   background-image: url(./assets/footer-bg.png);
   background-repeat: no-repeat;
@@ -301,24 +358,36 @@ font-weight: 700;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 116px;
+  padding: 6.5rem 0 7.25rem;
 }
 .footer h2{
    font-weight: 900;
-   font-size: 60px;
+   font-size: 4rem;
+}
+.footer p{
+  color: rgba(255, 255, 255, 0.6);
 }
 .footer .footer-div{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 50px;
-  margin: 35px 0;
+  gap: 3.1rem;
+  margin: 2.1rem 0;
 }
 
 .footer .footer-pera{
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: .8rem;
 }
+
+
+
+@media screen and (max-width: 576px) {
+  
+  .navbar{
+    
+  }
+} 
