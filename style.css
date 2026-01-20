@@ -386,6 +386,7 @@ main > section {
 .footer h2 {
   font-weight: 900;
   font-size: 4rem;
+  text-align: center;
 }
 .footer p {
   color: rgba(255, 255, 255, 0.6);
@@ -447,8 +448,12 @@ main > section {
   .choose h2 {
     font-size: 2.3rem;
     font-weight: 700;
+    text-align: center;
   }
 
+  .card-feature h2{
+    text-align: center;
+  }
   .card-feature .card-parent {
     display: flex;
     flex-direction: column;
@@ -462,6 +467,9 @@ main > section {
     text-align: center;
   }
 
+  .host>h2{
+    text-align: center;
+  }
   .alex .alex-btn {
     display: flex;
     justify-content: center;
@@ -476,15 +484,15 @@ main > section {
   }
 
   .footer h2 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     text-align: center;
   }
 
   .footer .footer-div {
     width: 60%;
     flex-wrap: wrap;
-    gap: 1.2rem 1.6rem;
-    margin: 1.4rem 0;
+    gap: 1rem 1.4rem;
+    margin: 0.8rem 0;
   }
 
   .footer .footer-pera {
