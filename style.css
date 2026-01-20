@@ -170,6 +170,7 @@ main > section {
 }
 .rating {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 10rem;
   gap: 5rem;
   text-align: center;
@@ -277,11 +278,18 @@ main > section {
   color: rgba(255, 255, 255, 0.6);
 }
 .card-parent {
+  width: 100%;
   display: flex;
-  gap: 2.9rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.9rem;
 }
 
 .card {
+  min-width:30%;
+  max-width: calc(450rem/16);
+  height: calc(500rem/16);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -293,6 +301,7 @@ main > section {
   border-radius: 0.9rem;
 }
 .card > iframe {
+  max-width: 98%;
   border-radius: 1rem;
 }
 .card .clock {
@@ -413,13 +422,6 @@ main > section {
   .banner {
     background-size: cover;
     background-position: center;
-  }
-
-  .rating {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
   }
 
   .choose .card-container {
